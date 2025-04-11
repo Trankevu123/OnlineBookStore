@@ -282,8 +282,7 @@ class QueueCustomerOrder {
         CustomerOrder[] orders = orderQueue.getAllOrders(new CustomerOrder[0]); //  Truyền mẫu mảng rỗng
 
         for (CustomerOrder order : orders) {
-            if (String.valueOf(order.getOrderId()).equals(keyword) ||
-                    order.getCustomerName().equalsIgnoreCase(keyword)) {
+            if (String.valueOf(order.getOrderId()).equals(keyword) || order.getCustomerName().equalsIgnoreCase(keyword)) {
                 return order; //  Trả về đơn hàng tìm thấy
             }
         }
